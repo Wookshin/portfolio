@@ -40,7 +40,7 @@
 
 body {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   cursor: default;
 }
 
@@ -129,7 +129,7 @@ p {
 
 /* Home */
 #home {
-  background: url('imgs/home-background.png') center/cover no-repeat;
+  background: url("imgs/home-background.png") center/cover no-repeat;
   padding: 40px;
   text-align: center;
 }
@@ -196,7 +196,8 @@ p {
   transform: rotate(-30deg) scale(1.1);
 }
 
-.major__title, .major__description {
+.major__title,
+.major__description {
   color: var(--color-dark-grey);
 }
 
@@ -214,7 +215,8 @@ p {
   text-align: left;
 }
 
-.job__name, .job__period {
+.job__name,
+.job__period {
   color: var(--color-light-grey);
 }
 
@@ -238,7 +240,7 @@ p {
 .skillset {
   display: flex;
   background-color: var(--color-light-grey);
-  color:var(--color-light-white);
+  color: var(--color-light-white);
   margin: 20px 0;
 }
 
@@ -298,10 +300,10 @@ p {
   padding: 8px 48px;
 }
 
-.category__btn.active, 
+.category__btn.active,
 .category__btn:hover {
   background-color: var(--color-pink);
-  color:var(--color-white)
+  color: var(--color-white);
 }
 
 .category__btn.active .category__count,
@@ -368,11 +370,11 @@ p {
 }
 
 .project__description h3 {
-  color: var(--color-white)
+  color: var(--color-white);
 }
 
 .project__description h3:after {
-  content: '';
+  content: "";
   display: block;
   position: relative;
   left: 50%;
@@ -381,7 +383,6 @@ p {
   margin-left: -12px;
   margin-top: 8px;
   background-color: var(--color-dark-white);
-
 }
 
 /* Testimonial */
@@ -424,4 +425,34 @@ p {
 
 .testimonial__speech-bubble a {
   color: var(--color-pink);
+}
+
+/* Contact */
+
+#contact {
+  background-color: var(--color-pink);
+}
+
+.contact__title,
+.contact__email,
+.contact__rights {
+  color: var(--color-white)
+}
+
+.contact__title {
+  margin: 32px 0;
+}
+
+.contact__links {
+  font-size: var(--font-large);
+  margin: 24px 0;
+}
+
+.contact__links i {
+  transition: all var(--animation-duration) ease;
+}
+
+.contact__links i:hover {
+  transform: scale(1.1);
+  color: var(--color-yellow)
 }
