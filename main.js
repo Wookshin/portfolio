@@ -12,3 +12,24 @@ window.addEventListener('scroll', () => {
   }
 }); 
 
+
+// Handle scrolling when tapping on the navbar menu
+let navbarMenu = document.querySelector('.navbar__menu');
+
+navbarMenu.addEventListener('click', (e) => {
+  let target = e.target;
+  const link = target.dataset.link;
+  if (link == null) {
+    return;
+  }
+
+  const scrollTo = document.querySelector(link);
+  scrollTo.scrollIntoView({behavior: "smooth"});
+});
+
+let contactBtn = document.querySelector('.home__contact');
+
+contactBtn.addEventListener('click', () => {
+  const scrollTo = document.querySelector('#contact');
+  scrollTo.scrollIntoView({behavior: "smooth"});
+});
