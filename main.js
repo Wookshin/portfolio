@@ -53,18 +53,16 @@ function selectNavItem(selected) {
   selectedNavItem.classList.add("active");
 }
 
-
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: "smooth" });
   selectNavItem(navItems[sectionIds.indexOf(selector)]);
 }
 
-
 const observerOptions = {
   root: null,
   rootMargin: "0px",
-  threshold: 0.5
+  threshold: 0.5,
 };
 
 const observerCallback = (entries, observer) => {
@@ -104,12 +102,25 @@ contactBtn.addEventListener("click", () => {
 });
 
 // Make home slowly fade to transparent as the window scrolls down
-const home = document.querySelector("#home");
-const homeContainer = document.querySelector(".home__container");
-const homeHeight = home.getBoundingClientRect().height;
+const containers = sectionIds.map(id => document.querySelector(`.${id.replace("#",'')}__container`))
+let heights = sections.map(section => section.getBoundingClientRect().height);
+
+document.addEventListener("resize", () => {
+  heights = sections.map(section => section.getBoundingClientRect().height);
+})
+
 document.addEventListener("scroll", () => {
-  homeContainer.style.opacity = 1 - window.scrollY / homeHeight;
-});
+  containers.forEach((container, idx) => {
+    let totalHeight = 0;
+    for(let i=0; i < idx; i++) {
+      totalHeight += heights[i];
+    }
+
+    container.style.opacity = 1 - ((window.scrollY - totalHeight) / heights[idx]);
+  })
+})
+
+const homeHeight = home.getBoundingClientRect().height;
 
 // Show "arrow up" button when scrolling down
 const arrowUp = document.querySelector(".arrow-up");
