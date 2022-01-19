@@ -13,6 +13,8 @@
   --color-yellow: #fff7d1;
   --color-orange: #feb546;
   --color-black: #000000;
+  --color-cadet-blue: cadetblue;
+  --color-dark-cadet-blue: #1f9ea0;
 
   /* Font size */
   --font-large: 48px;
@@ -109,7 +111,7 @@ p {
 }
 
 #navbar.navbar--dark {
-  background-color: var(--color-pink);
+  background-color: var(--color-cadet-blue);
   padding: 8px;
   transition: all var(--animation-duration) ease-in-out;
 }
@@ -133,7 +135,7 @@ p {
 
 .navbar__menu__item:hover {
   border-color: var(--color-white);
-  background-color: var(--color-dark-pink);
+  background-color: var(--color-dark-cadet-blue);
 }
 
 .navbar__menu__item.active {
@@ -180,7 +182,7 @@ p {
 }
 
 .home__contact:hover {
-  background-color: var(--color-orange);
+  background-color: var(--color-dark-cadet-blue);
 }
 
 /* Section common */
@@ -218,7 +220,7 @@ p {
 }
 
 .major__icon:hover i {
-  color: var(--color-pink);
+  color: var(--color-cadet-blue);
   transform: rotate(-30deg) scale(1.1);
 }
 
@@ -314,7 +316,6 @@ p {
 }
 
 /* Work */
-
 .work__categories {
   margin: 40px;
 }
@@ -329,7 +330,7 @@ p {
 
 .category__btn.selected,
 .category__btn:hover {
-  background-color: var(--color-pink);
+  background-color: var(--color-cadet-blue);
   color: var(--color-white);
 }
 
@@ -349,7 +350,7 @@ p {
   display: inline-block;
   position: absolute;
   top: -20px;
-  right:16px;
+  right: 16px;
   opacity: 0;
   transition: all var(--animation-duration) ease;
 }
@@ -462,13 +463,13 @@ p {
 }
 
 .testimonial__speech-bubble a {
-  color: var(--color-pink);
+  color: var(--color-dark-cadet-blue);
 }
 
 /* Contact */
 
 #contact {
-  background-color: var(--color-pink);
+  background-color: var(--color-cadet-blue);
 }
 
 .contact__title,
@@ -503,7 +504,7 @@ p {
   width: 70px;
   height: 70px;
   font-size: 50px;
-  background-color: var(--color-pink);
+  background-color: var(--color-cadet-blue);
   color: var(--color-white);
   border-radius: 50%;
   opacity: 0;
@@ -604,7 +605,7 @@ p {
     width: 120px;
     height: 120px;
   }
-  
+
   .arrow-up {
     width: 50px;
     height: 50px;
