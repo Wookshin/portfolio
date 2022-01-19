@@ -20,6 +20,7 @@
   /* Font size */
   --font-large: 48px;
   --font-medium: 28px;
+  --font-semi-medium: 22px;
   --font-regular: 18px;
   --font-small: 16px;
   --font-micro: 14px;
@@ -226,7 +227,8 @@ p {
 }
 
 .major__title,
-.major__description {
+.major__description,
+.job__name {
   color: var(--color-dark-grey);
 }
 
@@ -244,7 +246,6 @@ p {
   text-align: left;
 }
 
-.job__name,
 .job__period {
   color: var(--color-light-grey);
 }
@@ -275,6 +276,7 @@ p {
 
 .skillset__title {
   color: var(--color-white);
+  font-size: var(--font-semi-medium);
 }
 
 .skillset__left {
@@ -305,10 +307,24 @@ p {
 
 .skillset__right {
   flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
 }
 
 .tools {
   background-color: var(--color-grey);
+  flex-basis: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tools__list {
+  margin-bottom: 0px;
+  flex-grow: 1;
+}
+
+.etc {
+  flex-basis: 40%;
 }
 
 .tools,
@@ -523,6 +539,7 @@ p {
     /* Font size */
     --font-large: 30px;
     --font-medium: 18px;
+    --font-semi-medium: 17px;
     --font-regular: 16px;
     --font-small: 14px;
     --font-micro: 12px;
