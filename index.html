@@ -33,10 +33,12 @@
       </div>
       <ul class="navbar__menu">
         <li class="navbar__menu__item active" data-link="#home">Home</li>
-        <li class="navbar__menu__item " data-link="#about">About</li>
+        <li class="navbar__menu__item" data-link="#about">About</li>
         <li class="navbar__menu__item" data-link="#skills">Skills</li>
         <li class="navbar__menu__item" data-link="#work">My work</li>
-        <li class="navbar__menu__item" data-link="#testimonials">Testimonials</li>
+        <li class="navbar__menu__item" data-link="#testimonials">
+          Testimonials
+        </li>
         <li class="navbar__menu__item" data-link="#contact">Contact</li>
       </ul>
 
@@ -68,59 +70,61 @@
 
     <!-- About -->
     <section id="about" class="section section__container">
-      <h1>About me</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit minus cum
-        dolorem distinctio, enim ipsa et officiis adipisci explicabo quidem
-        minima excepturi, recusandae, porro deleniti dolores perspiciatis fuga
-        illo assumenda?
-      </p>
-      <div class="about__majors">
-        <div class="major">
-          <div class="major__icon">
-            <i class="fab fa-html5"></i>
+      <div class="about__container">
+        <h1>About me</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit minus
+          cum dolorem distinctio, enim ipsa et officiis adipisci explicabo
+          quidem minima excepturi, recusandae, porro deleniti dolores
+          perspiciatis fuga illo assumenda?
+        </p>
+        <div class="about__majors">
+          <div class="major">
+            <div class="major__icon">
+              <i class="fab fa-html5"></i>
+            </div>
+            <h2 class="major__title">Basic</h2>
+            <div class="major__description">HTML, CSS, Vanilla JS</div>
           </div>
-          <h2 class="major__title">Basic</h2>
-          <div class="major__description">HTML, CSS, Vanilla JS</div>
-        </div>
-        <div class="major">
-          <div class="major__icon">
-            <i class="fab fa-react"></i>
+          <div class="major">
+            <div class="major__icon">
+              <i class="fab fa-react"></i>
+            </div>
+            <h2 class="major__title">Advanced</h2>
+            <div class="major__description">TypeScript, React, Web APIs</div>
           </div>
-          <h2 class="major__title">Advanced</h2>
-          <div class="major__description">TypeScript, React, Web APIs</div>
-        </div>
-        <div class="major">
-          <div class="major__icon">
-            <i class="fab fa-node"></i>
-          </div>
-          <h2 class="major__title">Additional</h2>
-          <div class="major__description">Node.js, MongoDB, Webpack</div>
-        </div>
-      </div>
-      <div class="about__jobs">
-        <div class="job">
-          <img
-            src="imgs/jobs/logo-samsung.png"
-            alt="samsung"
-            class="job__logo"
-          />
-          <div class="job__description">
-            <p class="job__name">
-              Currently working at Samsung as Software Engineer
-            </p>
-            <p class="job__period">2017.12 ~ Until now</p>
+          <div class="major">
+            <div class="major__icon">
+              <i class="fab fa-node"></i>
+            </div>
+            <h2 class="major__title">Additional</h2>
+            <div class="major__description">Node.js, MongoDB, Webpack</div>
           </div>
         </div>
-        <div class="job">
-          <img
-            src="imgs/jobs/logo-samsung.png"
-            alt="samsung"
-            class="job__logo"
-          />
-          <div class="job__description">
-            <p class="job__name">software engineer</p>
-            <p class="job__period">4years</p>
+        <div class="about__jobs">
+          <div class="job">
+            <img
+              src="imgs/jobs/logo-samsung.png"
+              alt="samsung"
+              class="job__logo"
+            />
+            <div class="job__description">
+              <p class="job__name">
+                Currently working at Samsung as Software Engineer
+              </p>
+              <p class="job__period">2017.12 ~ Until now</p>
+            </div>
+          </div>
+          <div class="job">
+            <img
+              src="imgs/jobs/logo-samsung.png"
+              alt="samsung"
+              class="job__logo"
+            />
+            <div class="job__description">
+              <p class="job__name">software engineer</p>
+              <p class="job__period">4years</p>
+            </div>
           </div>
         </div>
       </div>
@@ -128,7 +132,7 @@
 
     <!-- Skills -->
     <section id="skills" class="section">
-      <div class="section__container">
+      <div class="section__container skills__container">
         <h1>Skills</h1>
         <h2>Skills & Attributes</h2>
         <p>
@@ -222,7 +226,7 @@
 
     <!-- Work -->
     <section id="work" class="section">
-      <div class="section__container">
+      <div class="section__container work__container">
         <h1>My work</h1>
         <h3>Projects</h3>
         <div class="work__categories">
@@ -339,7 +343,7 @@
 
     <!-- Testimonials -->
     <section id="testimonials" class="section">
-      <div class="section__container">
+      <div class="section__container testimonials__container">
         <h1>Testimonials</h1>
         <h3>See what they say about me</h3>
         <div class="testimonials">
@@ -406,23 +410,24 @@
 
     <!-- Contact -->
     <section id="contact" class="section">
-      <h1 class="contact__title">Let's talk</h1>
-      <h2 class="contact__email">wookshins@gmail.com</h2>
-      <div class="contact__links">
-        <a href="https://github.com/wookshin" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="#" target="_blank">
-          <i class="fa fa-linkedin-square"></i>
-        </a>
+      <div class="contact__container">
+        <h1 class="contact__title">Let's talk</h1>
+        <h2 class="contact__email">wookshins@gmail.com</h2>
+        <div class="contact__links">
+          <a href="https://github.com/wookshin" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="#" target="_blank">
+            <i class="fa fa-linkedin-square"></i>
+          </a>
+        </div>
+        <p class="contact__rights">2022 Wookshin - All rights reserved</p>
       </div>
-      <p class="contact__rights">2022 Wookshin - All rights reserved</p>
     </section>
 
     <!-- Arrow Up -->
     <button class="arrow-up">
       <i class="fas fa-arrow-up"></i>
     </button>
-
   </body>
 </html>

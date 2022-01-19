@@ -15,6 +15,7 @@
   --color-black: #000000;
   --color-cadet-blue: cadetblue;
   --color-dark-cadet-blue: #1f9ea0;
+  --color-apricot: #FA9978;
 
   /* Font size */
   --font-large: 48px;
@@ -220,7 +221,7 @@ p {
 }
 
 .major__icon:hover i {
-  color: var(--color-cadet-blue);
+  color: var(--color-apricot);
   transform: rotate(-30deg) scale(1.1);
 }
 
@@ -299,7 +300,7 @@ p {
 
 .skill__value {
   height: 3px;
-  background-color: var(--color-orange);
+  background-color: var(--color-apricot);
 }
 
 .skillset__right {
@@ -341,7 +342,7 @@ p {
 }
 
 .category__count {
-  background-color: var(--color-orange);
+  background-color: var(--color-apricot);
   border-radius: 50%;
   color: var(--color-white);
   width: 24px;
@@ -409,7 +410,7 @@ p {
 }
 
 .project__description h3 {
-  color: var(--color-orange);
+  color: var(--color-apricot);
 }
 
 .project__description h3:after {
@@ -493,7 +494,7 @@ p {
 
 .contact__links i:hover {
   transform: scale(1.1);
-  color: var(--color-yellow);
+  color: var(--color-apricot);
 }
 
 /* Arrow up */
@@ -536,7 +537,7 @@ p {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
-    background-color: var(--color-pink);
+    background-color: var(--color-cadet-blue);
   }
 
   #navbar.navbar--dark {
