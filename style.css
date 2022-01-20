@@ -632,9 +632,8 @@ p {
     line-height: 50px;
     right: 16px;
     bottom: 16px;
-  }
-
-  .fas {
-    display: inline;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
 }
