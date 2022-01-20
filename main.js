@@ -103,27 +103,35 @@ contactBtn.addEventListener("click", () => {
 
 // Make home slowly fade to transparent as the window scrolls down
 const containers = sectionIds.map(id => document.querySelector(`.${id.replace("#",'')}__container`))
-let heights = sections.map(section => section.getBoundingClientRect().height);
 
-document.addEventListener("resize", () => {
-  heights = sections.map(section => section.getBoundingClientRect().height);
-})
-
-document.addEventListener("scroll", () => {
-  containers.forEach((container, idx) => {
-    let totalHeight = 0;
-    for(let i=0; i < idx; i++) {
-      totalHeight += heights[i];
+const fadeObserverCallback = (entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.intersectionRatio <= 0) {
+      return;
     }
 
-    container.style.opacity = 1 - ((window.scrollY - totalHeight) / heights[idx]);
+    let offset = 0.3;
+    let fadeTargetIndex = sections.indexOf(entry.target);
+    let selfPercent = (entry.intersectionRect.height/entry.boundingClientRect.height + offset).toFixed(1)
+    let rootPercent = (entry.intersectionRect.height / window.innerHeight + offset).toFixed(1)
+    
+    containers[fadeTargetIndex].style.opacity = Math.max(selfPercent, rootPercent);
   })
-})
+} 
 
-const homeHeight = home.getBoundingClientRect().height;
+const fadeObserverOptions = {
+  root: null,
+  rootMargin: "0px",
+  threshold: Array.from({length: 101}, (v, i) => v = 0.01*i)
+}
+
+const fadeObserver = new IntersectionObserver(fadeObserverCallback, fadeObserverOptions);
+sections.forEach(section => fadeObserver.observe(section));
 
 // Show "arrow up" button when scrolling down
+const homeHeight = home.getBoundingClientRect().height;
 const arrowUp = document.querySelector(".arrow-up");
+
 window.addEventListener("scroll", () => {
   if (window.scrollY > homeHeight / 2) {
     arrowUp.classList.add("visible");
