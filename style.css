@@ -471,6 +471,9 @@ p {
 }
 
 .testimonial__speech-bubble {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 18px;
   background-color: var(--color-white);
   border-radius: var(--size-border-radius);
@@ -478,6 +481,11 @@ p {
 
 .testimonial__speech-bubble p {
   color: var(--color-light-grey);
+  text-align: left;
+}
+
+.testimonial__speech-bubble .name {
+  text-align: center;
 }
 
 .testimonial__speech-bubble a {

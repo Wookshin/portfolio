@@ -41,11 +41,6 @@ window.addEventListener('click', (e) => {
   }
 }, true)
 
-// const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
-// navbarToggleBtn.addEventListener("click", () => {
-//   navbarMenu.classList.toggle("open");
-// });
-
 // Auto hover Navbar Item as scrolling
 const sectionIds = [
   "#home",
