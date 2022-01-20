@@ -25,11 +25,26 @@ navbarMenu.addEventListener("click", (e) => {
   scrollIntoView(link);
 });
 
-// Navbar toggle button for small screen
-const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
-navbarToggleBtn.addEventListener("click", () => {
-  navbarMenu.classList.toggle("open");
-});
+// Navbar toggle button for small screen (Hide Navbar when click outside)
+window.addEventListener('click', (e) => {
+  if(e.target.matches('.navbar__toggle-btn') || e.target.matches('.fa-bars')) {
+    navbarMenu.classList.toggle("open");
+    return;
+  }
+
+  if(!navbarMenu.classList.contains("open")) {
+    return;
+  }
+
+  if (!e.target.matches('#navbar')) {
+    navbarMenu.classList.remove("open");
+  }
+}, true)
+
+// const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
+// navbarToggleBtn.addEventListener("click", () => {
+//   navbarMenu.classList.toggle("open");
+// });
 
 // Auto hover Navbar Item as scrolling
 const sectionIds = [
@@ -114,7 +129,7 @@ const fadeObserverCallback = (entries, observer) => {
     let fadeTargetIndex = sections.indexOf(entry.target);
     let selfPercent = (entry.intersectionRect.height/entry.boundingClientRect.height + offset).toFixed(1)
     let rootPercent = (entry.intersectionRect.height / window.innerHeight + offset).toFixed(1)
-    
+
     containers[fadeTargetIndex].style.opacity = Math.max(selfPercent, rootPercent);
   })
 } 
