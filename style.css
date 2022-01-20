@@ -521,6 +521,7 @@ p {
   width: 70px;
   height: 70px;
   font-size: 50px;
+  text-align: center;
   background-color: var(--color-cadet-blue);
   color: var(--color-white);
   border-radius: 50%;
