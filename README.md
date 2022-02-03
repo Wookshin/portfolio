@@ -5,7 +5,7 @@
 <br/>
 
 ## URL
- - https://wookshin.github.io/Portfolio/
+ - https://wookshin.github.io/portfolio/
 
 <br/>
 
