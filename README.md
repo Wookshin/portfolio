@@ -1,7 +1,5 @@
 # Wookshin's Portfolio
 
-<img src="imgs/projects/portfolio.png" width="500px" height="500px" title="portfolio"/>
-
 <br/>
 
 ## URL
